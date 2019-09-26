@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JiraKanban.AppWindows.SettingsWindow.SettingsController">
+    <stylesheets><URL value="@/CSS/settingsWindowStyle.css" /></stylesheets>
+
+    <left>
+        <VBox fx:id="settingButtons">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin></VBox>
+    </left>
+
+    <center>
+
+    </center>
+   <center>
+      <Pane fx:id="centralPane">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+         </BorderPane.margin></Pane>
+   </center>
+</BorderPane>

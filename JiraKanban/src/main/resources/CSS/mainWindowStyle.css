@@ -1,0 +1,97 @@
+.root {
+    -fx-background-size: 100% 100%;
+    -fx-background-color: #fcfeff;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+.text-area {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 18;
+}
+
+ .textFlow {
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+}
+
+.todo {
+    -fx-background-color: #ff5959;
+}
+
+.infoRequired {
+    -fx-background-color: #ff5959;
+}
+
+.inProgress {
+    -fx-background-color: #fff159;
+}
+
+.analysis {
+    -fx-background-color: #6d74fc;
+}
+
+.done {
+    -fx-background-color: #45f54d;
+}
+
+.noteStyle {
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-color: linear-gradient(to top, #ffffff, #f5f2d8);
+    -fx-border-color: #abfdf4;
+}
+
+.noteStatus {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.noteSummary {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 14;
+    -fx-font-weight: 700;
+}
+
+.createInfo {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 12;
+}
+
+.assigneeInfo {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 13;
+}
+
+.headerLabel {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 17;
+    -fx-font-weight: bold;
+}
+
+.doneButton:hover {
+    -fx-background-color: linear-gradient(#73ff7c, #b3ffb8);
+}
+
+.editButton:hover {
+    -fx-background-color: linear-gradient(#a9a6ff, #e1e0ff);
+}
+
+.deleteButton:hover {
+    -fx-background-color: linear-gradient(#fc9d9e, #ffdede);
+}
+
+.addButton:hover {
+    -fx-background-color: linear-gradient(#2bbd3a, #45ed56);
+}

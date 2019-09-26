@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JiraKanban.AppWindows.MainWindow.MainController">
+    <stylesheets><URL value="@/CSS/mainWindowStyle.css" /></stylesheets>
+
+    <center>
+        <ScrollPane>
+            <HBox>
+                <VBox>
+                    <Label alignment="CENTER" prefWidth="302.0" styleClass="todo" text="TO DO">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="2.0" right="2.0" />
+                    </VBox.margin>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                    </Label>
+                    <VBox fx:id="openSection">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </VBox>
+                </VBox>
+                <VBox>
+                    <Label alignment="CENTER" prefWidth="302.0" styleClass="infoRequired" text="INFORMATION REQUIRED">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="2.0" right="2.0" />
+                        </VBox.margin>
+                    </Label>
+                    <VBox fx:id="infoRequiredSection">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </VBox>
+                </VBox>
+                <VBox>
+                    <Label alignment="CENTER" prefWidth="302.0" styleClass="inProgress" text="IN PROGRESS">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="2.0" right="2.0" />
+                        </VBox.margin>
+                    </Label>
+                    <VBox fx:id="inProgressSection">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </VBox>
+                </VBox>
+                <VBox>
+                    <Label alignment="CENTER" prefWidth="302.0" styleClass="analysis" text="ANALYSIS">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="2.0" right="2.0" />
+                        </VBox.margin>
+                    </Label>
+                    <VBox fx:id="analysisSection">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </VBox>
+                </VBox>
+                <VBox>
+                    <Label alignment="CENTER" prefWidth="302.0" styleClass="done" text="DONE">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="2.0" right="2.0" />
+                        </VBox.margin>
+                    </Label>
+                    <VBox fx:id="doneSection">
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                        </padding>
+                    </VBox>
+                </VBox>
+            </HBox>
+        </ScrollPane>
+    </center>
+
+    <right>
+        <VBox fx:id="controlPanel"/>
+    </right>
+
+    <bottom>
+        <HBox fx:id="bottomPanel">
+            <Label fx:id="issueQuantity" text="Всего задач: ">
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin></Label>
+            <ProgressBar fx:id="progressBar" managed="false" prefHeight="23.0" prefWidth="612.0" visible="false">
+                <BorderPane.margin>
+                    <Insets bottom="5.0" left="20.0" />
+                </BorderPane.margin>
+            </ProgressBar>
+        </HBox>
+    </bottom>
+
+</BorderPane>

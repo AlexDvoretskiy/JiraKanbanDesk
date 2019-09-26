@@ -1,0 +1,10 @@
+.header {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 20;
+    -fx-font-weight: 700;
+}
+
+.label {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 16;
+}

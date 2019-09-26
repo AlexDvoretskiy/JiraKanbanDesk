@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="372.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JiraKanban.AppWindows.AuthWindow.AuthController">
+    <stylesheets><URL value="@/CSS/authWindowStyle.css" /></stylesheets>
+
+    <top>
+        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="header" text="Пожалуйста авторизуйтесь" textAlignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="55.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+
+    <center>
+        <GridPane prefHeight="134.0" prefWidth="345.0">
+            <Label fx:id="jiraLink" text="Jira link:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <GridPane.margin>
+                    <Insets bottom="5.0" />
+                </GridPane.margin>
+            </Label>
+            <TextField fx:id="jiraLinkField" prefHeight="31.0" prefWidth="230.0" text="https://job-jira.otr.ru" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+                <GridPane.margin>
+                    <Insets bottom="5.0" />
+                </GridPane.margin>
+            </TextField>
+            <Label fx:id="login" alignment="CENTER_RIGHT" text="Login:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets bottom="5.0" />
+                </GridPane.margin>
+            </Label>
+            <TextField fx:id="loginField" prefHeight="31.0" prefWidth="241.0" promptText="login" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+                <GridPane.margin>
+                    <Insets bottom="5.0" />
+                </GridPane.margin>
+            </TextField>
+            <Label fx:id="password" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets bottom="5.0" />
+                </GridPane.margin>
+            </Label>
+            <PasswordField fx:id="passwordField" promptText="password" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets bottom="5.0" />
+                </GridPane.margin>
+            </PasswordField>
+         <CheckBox fx:id="saveConfigs" mnemonicParsing="false" prefHeight="21.0" prefWidth="268.0" selected="true" text="save login and password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <CheckBox mnemonicParsing="false" text="use proxy server" GridPane.columnIndex="1" GridPane.rowIndex="6" fx:id="enableProxyCheckBox" onAction="#editProxyConfigurations">
+            <GridPane.margin>
+               <Insets bottom="10.0" />
+            </GridPane.margin></CheckBox>
+         <Label text="IP:" GridPane.rowIndex="7" />
+         <Label text="Port:" GridPane.rowIndex="8" />
+         <TextField fx:id="proxyIPtextField" prefHeight="31.0" prefWidth="241.0" GridPane.columnIndex="1" GridPane.rowIndex="7" text="00-srv-tmgclu03.roskazna.ru" disable="true">
+            <GridPane.margin>
+               <Insets bottom="10.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="proxyPortTextField" prefHeight="31.0" prefWidth="241.0" GridPane.columnIndex="1" GridPane.rowIndex="8" text="8080" disable="true"/>
+         <Separator disable="true" prefHeight="7.0" prefWidth="301.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <GridPane.margin>
+                <Insets bottom="5.0" />
+            </GridPane.margin>
+            <columnConstraints>
+                <ColumnConstraints maxWidth="86.0" minWidth="68.0" prefWidth="86.0" />
+                <ColumnConstraints maxWidth="240.0" minWidth="164.0" prefWidth="240.0" />
+            </columnConstraints>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets left="20.0" />
+            </BorderPane.margin>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox>
+         <Region prefHeight="31.0" prefWidth="298.0" />
+            <Button fx:id="loginButton" onAction="#login" text="Login" BorderPane.alignment="CENTER_RIGHT">
+                <BorderPane.margin>
+                    <Insets bottom="10.0" right="40.0" top="10.0" />
+                </BorderPane.margin>
+            </Button>
+         <BorderPane.margin>
+            <Insets bottom="15.0" top="15.0" />
+         </BorderPane.margin>
+        </HBox>
+    </bottom>
+
+</BorderPane>
